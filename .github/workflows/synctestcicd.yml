@@ -1,0 +1,10 @@
+name: testing branch synchronization 
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [test1 test2]  
+jobs:
+  build:
+      run: |
+          cat testfile
