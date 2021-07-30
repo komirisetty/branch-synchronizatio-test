@@ -6,8 +6,13 @@ on:
     branches: [test]  
 jobs:
   build:
+    $sourceBranch = "$(System.PullRequest.SourceBranch)"
+    if($sourceBranch -ne "test")
+    {
+      exit 1
+    }
     runs-on: ubuntu-latest
     steps:
     - name: test sync
       run: |
-          echo "hello babu"
+        echo "hello babu"
