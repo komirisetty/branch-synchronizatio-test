@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     env:
-      sourceBranch: ${{ System.PullRequest.SourceBranch }}
+      sourceBranch: ${{ github.event.pull_request.SourceBranch }}
     #if($sourceBranch -ne "test")
       #{
         #exit 1
