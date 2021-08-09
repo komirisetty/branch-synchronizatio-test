@@ -1,7 +1,7 @@
 name: testing branch synchronization 
 on:
   push:
-    branches: [main]
+    branches: [test]
   pull_request:
     branches: [main]  
 jobs:
